@@ -1,4 +1,4 @@
-package behavior.chainofresponsibility;
+package behavior.chainofresponsibility.example1;
 
 class DirectorApprover extends Approver {
     @Override
