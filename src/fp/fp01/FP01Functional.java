@@ -5,7 +5,7 @@ import java.util.List;
 public class FP01Functional {
 
     public static void main(String[] args) {
-        printEvenNumbersInListFunctional(List.of(12, 9, 13, 4, 6, 10, 5, 2));
+        printSquareOfEvenNumbersInListFunctional(List.of(12, 9, 13, 4, 6, 10, 5, 2));
     }
 
     private static void print(int num) {
@@ -23,6 +23,13 @@ public class FP01Functional {
     private static void printEvenNumbersInListFunctional(List<Integer> integers) {
         integers.stream()
                 .filter(FP01Functional::isEven)
+                .forEach(FP01Functional::print);
+    }
+
+    private static void printSquareOfEvenNumbersInListFunctional(List<Integer> integers) {
+        integers.stream()
+                .filter(FP01Functional::isEven)
+                .mapToInt(integer -> integer * integer)
                 .forEach(FP01Functional::print);
     }
 
